@@ -25,17 +25,20 @@
   <div class="container">
     <nav>
       <div class="nav-wrapper">
-        <form>
-          <div class="input-field">
-            <input class="card-panel #90a4ae blue-grey lighten-2" id="search" type="search" required>
-            <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-            <i class="material-icons">close</i>
-          </div>
-        </form>
+        <div class="row">
+          <form class="col s9 m10 l10">
+            <div class="input-field">
+              <input style="height: auto;" class="card-panel #90a4ae blue-grey lighten-2" id="input" type="search" required>
+              <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+              <i class="material-icons">close</i>
+            </div>
+          </form>
+          <button style="height: 64px; font-size: x-large;" class="col s3 m2 l2" id="search">Submit</button>
+        </div>
       </div>
     </nav>
 
-    <div id="currentday"></div>
+    <div style="text-align: center;" id="currentday"></div>
 
     <div class="section">
       <div class="row">
@@ -90,6 +93,7 @@
   <script type="text/javascript"
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZs0g3qSFW3yteHvHDQ2ObfHG18qU9gzY">
     </script>
+    <script src="./script.js"></script>
 </body>
 
 </html>

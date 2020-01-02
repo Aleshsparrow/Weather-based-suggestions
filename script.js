@@ -13,6 +13,7 @@ $(document).ready(function () {
         // calling the weather function
         getcurrent(user);
         getVideo();
+        getMusicVideo();
 
     });
 
@@ -75,20 +76,50 @@ $(document).ready(function () {
                 key: 'AIzaSyCZs0g3qSFW3yteHvHDQ2ObfHG18qU9gzY',
                 q: "how to make ice cream",
                 part: 'snippet',
-                maxResults: 1,
+                maxResults: 5,
                 type: 'video',
                 videoEmbeddable: true,
+                publicStatsViewable: true
+            },
+            success: function (res) {
+                embedVideo1(res)
+            },
+            error: function (res) {
+                console.log("Request Failed");
+            }
+        });
+    }
+    function embedVideo1(res) {
+        $('#one').attr('src', 'https://www.youtube.com/embed/' + res.items[0].id.videoId)
+    }
+
+    function getMusicVideo() {
+        $("#two").show();
+        $.ajax({
+            type: 'GET',
+            url: 'https://www.googleapis.com/youtube/v3/search',
+            data: {
+                key: 'AIzaSyCZs0g3qSFW3yteHvHDQ2ObfHG18qU9gzY',
+                q: "no copyright hip hop music",
+                part: 'snippet',
+                maxResults: 10,
+                type: 'video',
+                videoEmbeddable: true,
+                publicStatsViewable: true
             },
             success: function (data) {
                 embedVideo(data)
+                console.log(data);
+
             },
-            error: function (response) {
+            error: function (data) {
                 console.log("Request Failed");
             }
         });
     }
     function embedVideo(data) {
-        $('#one').attr('src', 'https://www.youtube.com/embed/' + data.items[0].id.videoId)
+        var i = Math.floor(Math.random() * 10)
+        $('#two').attr('src', 'https://www.youtube.com/embed/' + data.items[i].id.videoId)
     }
 
 });

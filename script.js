@@ -12,8 +12,7 @@ $(document).ready(function () {
 
         // calling the weather function
         getcurrent(user);
-        getVideo();
-        getMusicVideo();
+       
 
     });
 
@@ -27,6 +26,16 @@ $(document).ready(function () {
             console.log(response);
             var lat = response.coord.lat
             var lon = response.coord.lon
+            var number = response.main.temp
+            console.log(number)
+            if(number > 40){
+                getVideo();
+                getMusicVideo();
+            }
+            else{
+                getVideo2();
+                getMusicVideo2();
+            }
             var map = new google.maps.Map(document.getElementById('map'), {
                 zoom: 16,
                 center: new google.maps.LatLng(lat, lon),
@@ -122,4 +131,59 @@ $(document).ready(function () {
         $('#two').attr('src', 'https://www.youtube.com/embed/' + data.items[i].id.videoId)
     }
 
-});
+    function getVideo2() {
+        $("#one").show();
+        $.ajax({
+            type: 'GET',
+            url: 'https://www.googleapis.com/youtube/v3/search',
+            data: {
+                key: 'AIzaSyCZs0g3qSFW3yteHvHDQ2ObfHG18qU9gzY',
+                q: "how to make hot chocolate",
+                part: 'snippet',
+                maxResults: 5,
+                type: 'video',
+                videoEmbeddable: true,
+                publicStatsViewable: true
+            },
+            success: function (res) {
+                embedVideo1(res)
+            },
+            error: function (res) {
+                console.log("Request Failed");
+            }
+        });
+    }
+    function embedVideo1(res) {
+        $('#one').attr('src', 'https://www.youtube.com/embed/' + res.items[0].id.videoId)
+    }
+
+    function getMusicVideo2() {
+        $("#two").show();
+        $.ajax({
+            type: 'GET',
+            url: 'https://www.googleapis.com/youtube/v3/search',
+            data: {
+                key: 'AIzaSyCZs0g3qSFW3yteHvHDQ2ObfHG18qU9gzY',
+                q: "no copyright country music",
+                part: 'snippet',
+                maxResults: 10,
+                type: 'video',
+                videoEmbeddable: true,
+                publicStatsViewable: true
+            },
+            success: function (data) {
+                embedVideo(data)
+                console.log(data);
+
+            },
+            error: function (data) {
+                console.log("Request Failed");
+            }
+        });
+    }
+    function embedVideo(data) {
+        var i = Math.floor(Math.random() * 10)
+        $('#two').attr('src', 'https://www.youtube.com/embed/' + data.items[i].id.videoId)
+    }
+
+    });

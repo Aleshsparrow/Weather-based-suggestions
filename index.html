@@ -9,25 +9,21 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="card-panel #8d6e63 brown lighten-1">
-  <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCIZy8EElQrwVbut2xU1b1XjtR8E0yCLTQ&callback=initMap"
-  type="text/javascript"></script> -->
+<body>
   <nav>
-    <div class="nav-wrapper">
-      <a href="#" class="brand-logo center">Weather Based Suggestions</a>
-
-    </div>
+    <div style="text-align:center; font-size: x-large;" class="nav-wrapper">Weather Based Suggestions</div>
   </nav>
   <br>
 
   <div class="container">
+    <div style="text-align: center; font-size: x-large;" id="currentday"></div>
     <nav>
       <div class="nav-wrapper">
         <div class="row">
-          <form class="col s9 m10 l10">
+          <form style="padding:0;" class="col s9 m10 l10">
             <div class="input-field">
               <input style="height: auto;" class="card-panel #90a4ae blue-grey lighten-2" id="input" type="search"
                 required>
@@ -35,40 +31,42 @@
               <i class="material-icons">close</i>
             </div>
           </form>
-          <button style="height: 64px; font-size: x-large;" class="col s3 m2 l2" id="search">Submit</button>
+          <button style="height: auto; font-size: x-large;" class="card-panel col s3 m2 l2" id="search">Submit</button>
         </div>
       </div>
     </nav>
     <br>
-    <div style="text-align: center;" id="currentday"></div>
 
     <div class="section">
       <div class="row">
-        <div class="col s12 m6 l6" style="height: 300px;" class="card-panel #b71c1c red darken-4" id="weather">
+        <div class="col s12 m6 l6" style="height: 300px;" class="card-panel" id="weather">
         </div>
-        <div class="col s12 m6 l6" style="height: 300px;" class="card-panel #d1c4e9 deep-purple lighten-4" id="map">
+        <div class="col s12 m6 l6" style="height: 300px;" class="card-panel" id="map">
         </div>
       </div>
     </div>
 
     <div class="section">
       <div class="row">
-        <div class="col s12">
-          <h5>Based on your current weather condition, these are some things you can do and songs you should listen to:
+        <div style="display:none" id="text" class="col s12">
+          <h5>Based on your current weather condition, these are some things you can do and songs you should listen
+            to:
           </h5>
           <br>
         </div>
 
-        <div class="col s12 m5 l5"><iframe style="height: 300px; display:none" id="one" src=""></iframe></div>
-        <div class="col s0 m2 l2" style="height: 300px; text-align: center;"></div>
-        <div class="col s12 m5 l5"><iframe style="height: 300px; display:none" id="two" src=""></iframe></div>
+        <div style="float:left" class="col s12 m5 l5"><iframe style="height: 300px; display:none" id="one"
+            src=""></iframe></div>
+        <div style="float: right;" class="col s12 m5 l5"><iframe style="height: 300px; display:none" id="two"
+            src=""></iframe></div>
       </div>
     </div>
+  </div>
   </div>
 
 
 
-  <footer style="text-align: center; padding-bottom: 20px;" class="page-footer">
+  <footer style="text-align: center; padding: 10px;" class="page-footer">
     <div class="container" class="footer-copyright">
       © 2020 Copyright
     </div>

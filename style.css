@@ -8,3 +8,20 @@ body{
     background-image: url("http://www.todayifoundout.com/wp-content/uploads/2010/05/blue-sky.jpg");
     background-size: cover;
 }
+button{
+    height: 100%;
+    font-size: x-large;
+    float: right;
+}
+.row1{
+    height: 100%;
+    margin-bottom: 0;
+}
+#input{
+    width: 103.5%;
+    height: 100%;
+    margin: 0;
+}
+.nav-wrapper{
+width: 100%;
+}

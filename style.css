@@ -6,3 +6,8 @@
     text-align: center;
     background-color: #ee6e73;
 } */
+
+body{
+    background-image: url("http://www.todayifoundout.com/wp-content/uploads/2010/05/blue-sky.jpg");
+    background-size: cover;
+}

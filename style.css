@@ -25,3 +25,11 @@ button{
 .nav-wrapper{
 width: 100%;
 }
+
+#navbar{
+    background-color:#3686CB;
+}
+
+#footer{
+    background-color: #61AC2B;
+}

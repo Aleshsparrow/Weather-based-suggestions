@@ -34,6 +34,8 @@ $(document).ready(function () {
                 getMusicVideo();
                 var image1 = "https://www.moneycrashers.com/wp-content/uploads/2019/02/cheap-beach-family-destinations-1068x713.jpg"
                 $("body").css("background-image", "url(" + image1 + ")");
+                $("#navbar").css("background-color", "#01A5D3");
+                $("#footer").css("background-color", "#EED5B5");
             }
             else {
                 getVideo2();
@@ -41,6 +43,8 @@ $(document).ready(function () {
 
                 var image2 = "https://plnami.blob.core.windows.net/media/2017/02/make-snow-pallet-fire-system.jpg"
                 $("body").css("background-image", "url(" + image2 + ")");
+                $("body").css("background-color", "#F3F5F5");
+                $("#footer").css("background-color", "#94B4DF");
             }
             var map = new google.maps.Map(document.getElementById('map'), {
                 zoom: 16,

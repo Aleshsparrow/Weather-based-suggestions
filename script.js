@@ -1,6 +1,3 @@
-// $("body").attr("<img>", "src:https://www.moneycrashers.com/wp-content/uploads/2019/02/cheap-beach-family-destinations-1068x713.jpg")
-
-
 $(document).ready(function () {
     $("#currentday").text(moment().format('MMMM Do YYYY, h:mm:ss a'))
     var searchBtn = $("#search");
@@ -9,13 +6,14 @@ $(document).ready(function () {
 
     searchBtn.on("click", function () {
         event.preventDefault();
+        $("#text").show();
 
         user = $("#input").val();
         $("#input").val("");
 
         // calling the weather function
         getcurrent(user);
-       
+
 
     });
 
@@ -31,28 +29,22 @@ $(document).ready(function () {
             var lon = response.coord.lon
             var number = response.main.temp
             console.log(number)
-            if(number > 40){
+            if (number > 40) {
                 getVideo();
                 getMusicVideo();
                 var image1 = "https://www.moneycrashers.com/wp-content/uploads/2019/02/cheap-beach-family-destinations-1068x713.jpg"
                 $("body").css("background-image", "url(" + image1 + ")");
-                
-                // var img1 = $("<img>").attr(
-                // "src", "https://www.moneycrashers.com/wp-content/uploads/2019/02/cheap-beach-family-destinations-1068x713.jpg")
-                // $("body").append(img1)
-                // $("body").append(img1).attr("background-sive", "cover")
-                // $("body").append("<img>", "src:https://www.moneycrashers.com/wp-content/uploads/2019/02/cheap-beach-family-destinations-1068x713.jpg")
+                $("#navbar").css("background-color", "#01A5D3");
+                $("#footer").css("background-color", "#EED5B5");
             }
-            else{
+            else {
                 getVideo2();
                 getMusicVideo2();
 
                 var image2 = "https://plnami.blob.core.windows.net/media/2017/02/make-snow-pallet-fire-system.jpg"
                 $("body").css("background-image", "url(" + image2 + ")");
-                // var img2 = $("<img>").attr(
-                //     "src", "https://plnami.blob.core.windows.net/media/2017/02/make-snow-pallet-fire-system.jpg")
-                //     $("body").append(img2).attr("background-sive", "cover")
-                // $("body").append("<img>", "src:https://plnami.blob.core.windows.net/media/2017/02/make-snow-pallet-fire-system.jpg")
+                $("body").css("background-color", "#F3F5F5");
+                $("#footer").css("background-color", "#94B4DF");
             }
             var map = new google.maps.Map(document.getElementById('map'), {
                 zoom: 16,
@@ -204,4 +196,4 @@ $(document).ready(function () {
         $('#two').attr('src', 'https://www.youtube.com/embed/' + data.items[i].id.videoId)
     }
 
-    });
+});

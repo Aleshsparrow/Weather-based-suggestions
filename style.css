@@ -1,13 +1,35 @@
-/* footer{
+footer{
     position: fixed;
     bottom: 0;
-    height: 40px;
     width: 100%; 
-    text-align: center;
-    background-color: #ee6e73;
-} */
+}
 
 body{
     background-image: url("http://www.todayifoundout.com/wp-content/uploads/2010/05/blue-sky.jpg");
     background-size: cover;
+}
+button{
+    height: 100%;
+    font-size: x-large;
+    float: right;
+}
+.row1{
+    height: 100%;
+    margin-bottom: 0;
+}
+#input{
+    width: 103.5%;
+    height: 100%;
+    margin: 0;
+}
+.nav-wrapper{
+width: 100%;
+}
+
+#navbar{
+    background-color:#3686CB;
+}
+
+#footer{
+    background-color: #61AC2B;
 }

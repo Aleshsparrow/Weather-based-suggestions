@@ -23,6 +23,7 @@ button{
     height: 100%;
     margin: 0;
     padding-left: 0;
+    text-align: center;
 }
 .nav-wrapper{
 width: 100%;

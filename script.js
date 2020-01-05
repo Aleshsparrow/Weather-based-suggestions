@@ -4,6 +4,19 @@ $(document).ready(function () {
     var weather = $("#weather");
     // var map = $("#map")
 
+    $("#input").keydown(function (e) {
+        if (e.keyCode == 13) {
+            event.preventDefault();
+            $("#text").show();
+
+            user = $("#input").val();
+            $("#input").val("");
+
+            // calling the weather function
+            getcurrent(user);
+        }
+    });
+
     searchBtn.on("click", function () {
         event.preventDefault();
         $("#text").show();

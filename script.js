@@ -31,7 +31,7 @@ $(document).ready(function () {
     });
 
     function getcurrent(user) {
-        var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + user + ",us&units=imperial&appid=166a433c57516f51dfab1f7edaed8413";
+        var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + user + ",us&units=imperial&appid=166a433c57516f51dfab1f7edaed8413";
 
         $.ajax({
             url: queryURL,
@@ -97,7 +97,7 @@ $(document).ready(function () {
                 getVideo(user1);
                 getMusicVideo(user2);
 
-                var image2 = "http://coldclimatechange.com/wp-content/uploads/2019/05/viole.gif"
+                var image2 = "https://coldclimatechange.com/wp-content/uploads/2019/05/viole.gif"
                 $("body").css("background-image", "url(" + image2 + ")");
                 $("body").css("background-color", "#F3F5F5");
                 $("#footer").css("background-color", "#94B4DF");
@@ -149,7 +149,7 @@ $(document).ready(function () {
             var container = $("<div>");
             var img = $("<img>").attr(
                 "src",
-                "http://openweathermap.org/img/w/" + response.weather[0].icon + ".png"
+                "https://openweathermap.org/img/w/" + response.weather[0].icon + ".png"
 
             );
             // append html

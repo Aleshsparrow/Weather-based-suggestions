@@ -65,7 +65,7 @@ $(document).ready(function () {
                 user2 = "no copyright trance music"
                 getVideo(user1);
                 getMusicVideo(user2);
-                var image1 = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMGaDgbfCSV8ptQ9KoWjM_rZrFG8mvEKr9PAUzixSqRZeIuD-a&s"
+                var image1 = "https://cache.boston.com/bonzai-fba/Globe_Photo/2009/02/05/warm31__1233854416_8388.jpg"
                 $("body").css("background-image", "url(" + image1 + ")");
                 $("#navbar").css("background-color", "#01A5D3");
                 $("#footer").css("background-color", "#EED5B5");
@@ -97,7 +97,7 @@ $(document).ready(function () {
                 getVideo(user1);
                 getMusicVideo(user2);
 
-                var image2 = "https://coldclimatechange.com/wp-content/uploads/2019/05/viole.gif"
+                var image2 = "https://i.huffpost.com/gen/2472844/thumbs/o-COLD-WEATHER-HEALTH-BENEFITS-facebook.jpg"
                 $("body").css("background-image", "url(" + image2 + ")");
                 $("body").css("background-color", "#F3F5F5");
                 $("#footer").css("background-color", "#94B4DF");

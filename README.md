@@ -19,7 +19,8 @@ Link to the live website can be found in the contact section.
 * All you need to view this project is a web browser.
 
 ## Usage
-* To help pass time without leaving the comfort of your home
+* To help pass time without leaving the comfort of your home.
+* To help suggest some things to do based on the weather.
 
 ## Contact
 * Segun Alesinloye (segunalesh@gmail.com)
@@ -32,3 +33,4 @@ Link to the live website can be found in the contact section.
 * Moment.js
 * Materialize
 * Google Icons
+* Google API

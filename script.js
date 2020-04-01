@@ -41,7 +41,7 @@
             var lat = response.coord.lat
             var lon = response.coord.lon
             var number = response.main.temp
-            // Setting if conditions for diffenreny weather
+            // Setting if conditions for diffenrent weather
             if (number > 40 && number < 50) {
                 user1 = "how to make hot soup"
                 user2 = "no copyright hip hop music"
@@ -154,7 +154,7 @@
                 "https://openweathermap.org/img/w/" + response.weather[0].icon + ".png"
 
             );
-            // append html
+            // Append weather information to the page
             city.append(img);
             container.append(city, temp, humidity, windSpd);
             content.append(container);

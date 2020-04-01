@@ -1,9 +1,10 @@
-$(document).ready(function () {
+// Setting dste and time to current date and time using moment.js
+    $(document).ready(function () {
     $("#currentday").text(moment().format('MMMM Do YYYY, h:mm:ss a'))
     var searchBtn = $("#search");
     var weather = $("#weather");
-    // var map = $("#map")
 
+// var map = $("#map")
     $("#input").keydown(function (e) {
         if (e.keyCode == 13) {
             event.preventDefault();

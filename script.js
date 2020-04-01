@@ -17,7 +17,7 @@
             getcurrent(user);
         }
     });
-
+// Onclick function for the search button
     searchBtn.on("click", function () {
         event.preventDefault();
         $("#text").show();
@@ -41,6 +41,7 @@
             var lat = response.coord.lat
             var lon = response.coord.lon
             var number = response.main.temp
+            // Setting if conditions for diffenreny weather
             if (number > 40 && number < 50) {
                 user1 = "how to make hot soup"
                 user2 = "no copyright hip hop music"

@@ -163,6 +163,7 @@
         });
     }
 
+    // Function to make API call for youtube activities videos
     function getVideo(user1) {
         $("#one").show();
         $.ajax({
@@ -189,6 +190,7 @@
         $('#one').attr('src', 'https://www.youtube.com/embed/' + res.items[0].id.videoId)
     }
 
+    // Function to make API call for youtube music videos
     function getMusicVideo(user2) {
         $("#two").show();
         $.ajax({

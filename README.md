@@ -1,8 +1,7 @@
-# Project-One
 # Weather Based Suggestions
 
 ## About the project.
-* This project was developed in order to help eliminate being idle because of the weather. Sometimes we are short of things to do because it is too cold or too hot, if this is the case, this web app will help suggest somethings you can learn to help cope better with the weather condition and also suggest some music to go with the mood.
+* This project was developed in order to help eliminate being idle because of the weather. Sometimes we are short of things to do because the weather is too cold or too hot, if this is the case, this web app will help suggest somethings you can learn to help cope better with the weather condition and also suggest some music to go with the mood.
 
 Upon opening this web app, you will be asked to enter your zip code and upon clicking the search button or pressing enter, your city, location on google maps and some videos will be displayed. 
 

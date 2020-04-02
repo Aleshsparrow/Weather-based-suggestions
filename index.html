@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>Weather Based Suggestions</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -13,11 +13,12 @@
 </head>
 
 <body>
+  <!-- Navbar -->
   <nav id="navbar">
     <div style="text-align:center; font-size: x-large;" class="nav-wrapper">Weather Based Suggestions</div>
   </nav>
   <br>
-
+<!-- Container -->
   <div class="container">
     <div style="text-align: center; font-size: x-large;" id="currentday"></div>
     <nav>
@@ -38,8 +39,10 @@
 
     <div class="section">
       <div class="row">
+        <!-- Append weather info here -->
         <div class="col s12 m6 l6" style="height: 300px;" class="card-panel" id="weather">
         </div>
+        <!-- Append map here -->
         <div class="col s12 m6 l6" style="height: 300px;" class="card-panel" id="map">
         </div>
       </div>
@@ -53,6 +56,8 @@
           </h5>
           <br>
         </div>
+
+                <!-- Append activities video here -->
 
         <div style="float:left" class="col s12 m5 l5"><iframe style="height: 300px; display:none" id="one"
             src=""></iframe></div>

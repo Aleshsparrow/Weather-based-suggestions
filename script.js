@@ -1,31 +1,42 @@
-$(document).ready(function () {
+// Setting dste and time to current date and time using moment.js
+    $(document).ready(function () {
     $("#currentday").text(moment().format('MMMM Do YYYY, h:mm:ss a'))
     var searchBtn = $("#search");
     var weather = $("#weather");
-    // var map = $("#map")
 
+// var map = $("#map")
     $("#input").keydown(function (e) {
         if (e.keyCode == 13) {
             event.preventDefault();
+            if($("#input").val() == ""){
+                $("#text") = "";
+            }
+            else{
+                $("#text").show();
+        
+                user = $("#input").val();
+                $("#input").val("");
+        
+                // calling the weather function
+                getcurrent(user);
+            }
+        }
+    });
+// Onclick function for the search button
+    searchBtn.on("click", function () {
+        event.preventDefault();
+        if($("#input").val() == ""){
+            $("#text") = "";
+        }
+        else{
             $("#text").show();
-
+    
             user = $("#input").val();
             $("#input").val("");
-
+    
             // calling the weather function
             getcurrent(user);
         }
-    });
-
-    searchBtn.on("click", function () {
-        event.preventDefault();
-        $("#text").show();
-
-        user = $("#input").val();
-        $("#input").val("");
-
-        // calling the weather function
-        getcurrent(user);
 
 
     });
@@ -40,6 +51,7 @@ $(document).ready(function () {
             var lat = response.coord.lat
             var lon = response.coord.lon
             var number = response.main.temp
+            // Setting if conditions for diffenrent weather
             if (number > 40 && number < 50) {
                 user1 = "how to make hot soup"
                 user2 = "no copyright hip hop music"
@@ -152,7 +164,7 @@ $(document).ready(function () {
                 "https://openweathermap.org/img/w/" + response.weather[0].icon + ".png"
 
             );
-            // append html
+            // Append weather information to the page
             city.append(img);
             container.append(city, temp, humidity, windSpd);
             content.append(container);
@@ -161,6 +173,7 @@ $(document).ready(function () {
         });
     }
 
+    // Function to make API call for youtube activities videos
     function getVideo(user1) {
         $("#one").show();
         $.ajax({
@@ -187,6 +200,7 @@ $(document).ready(function () {
         $('#one').attr('src', 'https://www.youtube.com/embed/' + res.items[0].id.videoId)
     }
 
+    // Function to make API call for youtube music videos
     function getMusicVideo(user2) {
         $("#two").show();
         $.ajax({

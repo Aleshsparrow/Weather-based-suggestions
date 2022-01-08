@@ -180,7 +180,7 @@
             type: 'GET',
             url: 'https://www.googleapis.com/youtube/v3/search',
             data: {
-                key: 'AIzaSyCZs0g3qSFW3yteHvHDQ2ObfHG18qU9gzY',
+                key: 'AIzaSyD2kTjwcP4HhffwH5TooIC9J9P0rGxYjl4',
                 q: user1,
                 part: 'snippet',
                 maxResults: 5,
@@ -207,7 +207,7 @@
             type: 'GET',
             url: 'https://www.googleapis.com/youtube/v3/search',
             data: {
-                key: 'AIzaSyCZs0g3qSFW3yteHvHDQ2ObfHG18qU9gzY',
+                key: 'AIzaSyD2kTjwcP4HhffwH5TooIC9J9P0rGxYjl4',
                 q: user2,
                 part: 'snippet',
                 maxResults: 10,
